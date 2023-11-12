@@ -32,13 +32,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-LK-xrg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD1-LK-xrg">
                                 <rect key="frame" x="53" y="400" width="287" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Antwort">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="answerButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVn-8x-WEP"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LzV-2X-snt">
                                 <rect key="frame" x="0.0" y="767" width="393" height="85"/>
@@ -66,16 +70,18 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMK-0y-b6D">
-                                <rect key="frame" x="53" y="576" width="287" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMK-0y-b6D">
+                                <rect key="frame" x="53" y="543" width="287" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Antwort">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gZ-GP-elj">
-                                <rect key="frame" x="53" y="485" width="287" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gZ-GP-elj">
+                                <rect key="frame" x="53" y="471" width="287" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Antwort">
@@ -91,13 +97,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jda-3I-Hdo" secondAttribute="trailing" constant="38" id="CDq-WG-f9S"/>
                             <constraint firstItem="Jda-3I-Hdo" firstAttribute="top" secondItem="Iig-hH-9UM" secondAttribute="bottom" constant="65" id="Fba-i0-Jvg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iig-hH-9UM" secondAttribute="trailing" constant="16" id="cGp-xY-Cb3"/>
-                            <constraint firstItem="WMK-0y-b6D" firstAttribute="top" secondItem="0gZ-GP-elj" secondAttribute="bottom" constant="45" id="ikH-Lg-kVm"/>
                             <constraint firstItem="Iig-hH-9UM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jJG-rb-4bU"/>
-                            <constraint firstItem="0gZ-GP-elj" firstAttribute="top" secondItem="oD1-LK-xrg" secondAttribute="bottom" constant="45" id="mp4-Ed-1nF"/>
                             <constraint firstItem="Iig-hH-9UM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="uTG-7t-oMt"/>
-                            <constraint firstItem="WMK-0y-b6D" firstAttribute="top" secondItem="0gZ-GP-elj" secondAttribute="bottom" constant="45" id="vJd-zi-Ia6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerButton1" destination="oD1-LK-xrg" id="8MI-3p-dzE"/>
+                        <outlet property="answerButton2" destination="0gZ-GP-elj" id="KIM-Xa-RdL"/>
+                        <outlet property="answerButton3" destination="WMK-0y-b6D" id="p1w-R3-LbC"/>
+                        <outlet property="progressBarView" destination="O6d-q4-fDu" id="DNW-aQ-X6j"/>
+                        <outlet property="questionCountLabel" destination="TSD-kL-1tl" id="Igo-Om-44U"/>
+                        <outlet property="questionLabel" destination="Jda-3I-Hdo" id="nbF-iw-cbR"/>
+                        <outlet property="scoreLabel" destination="lk3-el-qp4" id="Qcc-sw-boB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
