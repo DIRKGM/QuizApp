@@ -21,13 +21,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
+        // Setup Button aufrufen
+        SetupButton()
+        
     }
 
     //MARK: Setup Button
     func SetupButton(){
         // Tag vergeben
+        answerButton1.tag = 1
+        answerButton2.tag = 2
+        answerButton3.tag = 3
+        
+        answerButton1.layer.cornerRadius = 25
+        answerButton1.layer.borderWidth = 3
+        answerButton1.layer.borderColor = UIColor.black.cgColor
+        
+        answerButton2.layer.cornerRadius = 25
+        answerButton2.layer.borderWidth = 3
+        answerButton2.layer.borderColor = UIColor.black.cgColor
+        
+        answerButton3.layer.cornerRadius = 25
+        answerButton3.layer.borderWidth = 3
+        answerButton3.layer.borderColor = UIColor.black.cgColor
         
     }
+    
+    
     
     
     // MARK: Actions
