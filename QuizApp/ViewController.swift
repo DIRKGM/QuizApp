@@ -55,6 +55,47 @@ class ViewController: UIViewController {
     @IBAction func answerButton_Tapped(_ sender: UIButton) {
     }
     
+    // MARK: Create Questions Object
+    func createQuestionObject (){
+        let question1 = Question(text: "Hauptstadt von Deutschland?")
+        question1.answer1 = "Berlin"
+        question1.answer2 = "Hamburg"
+        question1.answer3 = "München"
+        question1.correvtAnswerTag = 1
+        
+        let question2 = Question(text: "Hauptstadt von Polen?")
+        question2.answer1 = "Krakau"
+        question2.answer2 = "Warschau"
+        question2.answer3 = "Moskau"
+        question2.correvtAnswerTag = 2
+        
+        let question4 = Question(text: "Hauptstadt von Össterreich?")
+        question4.answer1 = "Wien"
+        question4.answer2 = "Hamburg"
+        question4.answer3 = "München"
+        question4.correctAnswerTag = 1
+        
+        let question5 = Question(text: "Hauptstadt von Bulgarien?")
+        question5.answer1 = "Berlin"
+        question5.answer2 = "Sofia"
+        question5.answer3 = "München"
+        question5.correctAnswerTag = 2
+        
+        let question6 = Question(text: "Hauptstadt von Ungarn?")
+        question6.answer1 = "Budapest"
+        question6.answer2 = "Hamburg"
+        question6.answer3 = "München"
+        question6.correctAnswerTag = 1
+        
+        let question7 = Question(text: "Hauptstadt von Tschechien?")
+        question7.answer1 = "Berlin"
+        question7.answer2 = "Prag"
+        question7.answer3 = "München"
+        qustion7.correctAnswerTag = 2
+        
+    }
+    
+    
     
     
     
