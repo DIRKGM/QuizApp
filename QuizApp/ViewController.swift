@@ -39,12 +39,12 @@ class ViewController: UIViewController {
         answerButton2.setTitle(questions[0].answer2, for: .normal)
         answerButton3.setTitle(questions[0].answer3, for: .normal)
         
-    // MARK: UI einrichten
+        // MARK: UI einrichten
         scoreLabel.text = "Score: 0"
         questionCountLabel.text = "1 / \(questions.count)"
         
     }
-
+    
     //MARK: Setup Button
     func SetupButton(){
         // Tag vergeben
@@ -68,9 +68,9 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func answerButton_Tapped(_ sender: UIButton) {
-     
+        
         let answerTag = sender.tag
-       
+        
         // Antwort prüfen
         checkAnswer(answerTag: answerTag)
         
@@ -97,9 +97,25 @@ class ViewController: UIViewController {
             updateUI()
         } else {
             // Quiz neustarten
+            createRestartAllertBox()        }
+    }
+    
+    //MARK: Restart Quiz
+    func createRestartAllertBox (){
+        let alert = UIAlertController(title: "Quiz Ende", message: "Quiz Neustart", preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Neustart", style: .default){ (ACTION) in
+            self.restart()
             
         }
+        alert.addAction(restartAction)
+        self.present(alert, animated: true, completion: nil)
     }
+    func restart (){
+        questionNumber = 0
+        score = 0
+        questionCountLabel.text = "1 / \(questions.count)"
+        nextQuestion()
+}
     
     //MARK: Update UI
     func updateUI(){
