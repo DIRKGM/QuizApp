@@ -18,12 +18,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBarView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    // MARK: Variable
+    var questions = [Question]()
+    var questionNumber = 0
+    var score = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
+        
         // Setup Button aufrufen
         SetupButton()
+        
+        // Fragen erstellen
+        createQuestionObject()
+        
+        // Erste Frage anzeigen
+        questionLabel.text = questions[0].questionText
+        answerButton1.setTitle(questions[0].answer1, for: .normal)
+        answerButton2.setTitle(questions[0].answer2, for: .normal)
+        answerButton3.setTitle(questions[0].answer3, for: .normal)
+        
+    // MARK: UI einrichten
+        scoreLabel.text = "Score: 0"
+        questionCountLabel.text = "1 / \(questions.count)"
         
     }
 
@@ -48,11 +66,51 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
     // MARK: Actions
     @IBAction func answerButton_Tapped(_ sender: UIButton) {
+     
+        let answerTag = sender.tag
+       
+        // Antwort prüfen
+        checkAnswer(answerTag: answerTag)
+        
+        // nächste Fragen laden
+        nextQuestion()
+        
+    }
+    
+    func checkAnswer(answerTag: Int){
+        if answerTag == questions[questionNumber].correctAnswerTag{
+            score += 10
+        } else {
+            
+        }
+        questionNumber += 1
+    }
+    
+    func nextQuestion(){
+        if questionNumber < questions.count {
+            questionLabel.text = questions[questionNumber].questionText
+            answerButton1.setTitle(questions[questionNumber].answer1, for: .normal)
+            answerButton2.setTitle(questions[questionNumber].answer2, for: .normal)
+            answerButton3.setTitle(questions[questionNumber].answer3, for: .normal)
+            updateUI()
+        } else {
+            // Quiz neustarten
+            
+        }
+    }
+    
+    //MARK: Update UI
+    func updateUI(){
+        //Score wird erweitert bzw. läuft mit
+        scoreLabel.text = "Score: \(score)"
+        questionCountLabel.text = "\(questionNumber + 1) / \(questions.count)"
+        // Balken läuft mit / wächst
+        let widthIphone = self.view.frame.size.width
+        let widthProgressCountView = Int(widthIphone) / questions.count
+        progressBarView.frame.size.width = CGFloat(widthProgressCountView) * CGFloat(questionNumber + 1)
+        
     }
     
     // MARK: Create Questions Object
@@ -61,13 +119,19 @@ class ViewController: UIViewController {
         question1.answer1 = "Berlin"
         question1.answer2 = "Hamburg"
         question1.answer3 = "München"
-        question1.correvtAnswerTag = 1
+        question1.correctAnswerTag = 1
         
         let question2 = Question(text: "Hauptstadt von Polen?")
         question2.answer1 = "Krakau"
         question2.answer2 = "Warschau"
         question2.answer3 = "Moskau"
-        question2.correvtAnswerTag = 2
+        question2.correctAnswerTag = 2
+        
+        let question3 = Question(text: "Hauptstadt von Belgien?")
+        question3.answer1 = "Berlin"
+        question3.answer2 = "Hamburg"
+        question3.answer3 = "Brüssel"
+        question3.correctAnswerTag = 3
         
         let question4 = Question(text: "Hauptstadt von Össterreich?")
         question4.answer1 = "Wien"
@@ -91,8 +155,16 @@ class ViewController: UIViewController {
         question7.answer1 = "Berlin"
         question7.answer2 = "Prag"
         question7.answer3 = "München"
-        qustion7.correctAnswerTag = 2
+        question7.correctAnswerTag = 2
         
+        // Fragen in Array hinzufügen
+        questions.append(question1)
+        questions.append(question2)
+        questions.append(question3)
+        questions.append(question4)
+        questions.append(question5)
+        questions.append(question6)
+        questions.append(question7)
     }
     
     

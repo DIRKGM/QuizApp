@@ -15,7 +15,7 @@ class Question {
     var answer1 : String = ""
     var answer2 : String = ""
     var answer3 : String = ""
-    var correvtAnswerTag : Int = 0
+    var correctAnswerTag : Int = 0
     
     // Init
     init(text : String) {
