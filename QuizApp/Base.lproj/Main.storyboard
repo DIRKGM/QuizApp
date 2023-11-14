@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D5t-3V-D2D">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iig-hH-9UM">
-                                <rect key="frame" x="16" y="88" width="361" height="63.333333333333343"/>
+                                <rect key="frame" x="16" y="29.000000000000004" width="361" height="63.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jda-3I-Hdo">
-                                <rect key="frame" x="38" y="216.33333333333337" width="317" height="134"/>
+                                <rect key="frame" x="38" y="157.33333333333334" width="317" height="134.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="134" id="6RA-C3-eCq"/>
                                     <constraint firstAttribute="height" constant="134" id="wPC-rf-vi4"/>
@@ -88,6 +88,21 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-R5-C6K">
+                                <rect key="frame" x="145" y="666" width="102" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Zurück">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="returButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZw-se-s14"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -108,6 +123,7 @@
                         <outlet property="progressBarView" destination="O6d-q4-fDu" id="DNW-aQ-X6j"/>
                         <outlet property="questionCountLabel" destination="TSD-kL-1tl" id="Igo-Om-44U"/>
                         <outlet property="questionLabel" destination="Jda-3I-Hdo" id="nbF-iw-cbR"/>
+                        <outlet property="returnButton" destination="c4u-R5-C6K" id="lW2-so-Dkg"/>
                         <outlet property="scoreLabel" destination="lk3-el-qp4" id="Qcc-sw-boB"/>
                     </connections>
                 </viewController>
@@ -177,11 +193,12 @@
                         <outlet property="highscoreButton" destination="tCL-fM-SxH" id="Nz4-6T-ETt"/>
                         <outlet property="highscoreLabel" destination="tCL-fM-SxH" id="bbG-Xm-XHX"/>
                         <outlet property="startGameButton" destination="tCL-fM-SxH" id="yDq-qp-K6Z"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="startgame" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cD7-bt-Z0C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epP-B3-nE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965.64885496183206" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-599" y="-27"/>
         </scene>
     </scenes>
     <resources>

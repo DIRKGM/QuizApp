@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var progressBarView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var returnButton: UIButton!
     
     // MARK: Variable
     var questions = [Question]()
@@ -65,7 +66,10 @@ class ViewController: UIViewController {
         answerButton3.layer.borderWidth = 3
         answerButton3.layer.borderColor = UIColor.white.cgColor
         
-    }
+        returnButton.layer.cornerRadius = 25
+        returnButton.layer.borderWidth = 3
+        returnButton.layer.borderColor = UIColor.black.cgColor
+        }
     
     // MARK: Actions
     @IBAction func answerButton_Tapped(_ sender: UIButton) {
@@ -187,7 +191,10 @@ class ViewController: UIViewController {
         questions.append(question7)
     }
     
-    
+    //MARK: Spring zurück auf Startview
+    @IBAction func returButton_Tapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     
     
     

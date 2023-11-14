@@ -28,8 +28,10 @@ class StartViewController: UIViewController {
     @IBAction func highscoreButton_Tapped(_ sender: UIButton) {
     }
     
-    //MARK: Start Game
+    //MARK: Start Game - Spring auf anderen View
     @IBAction func startGameButton_Tapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "startgame", sender: nil)
+        
     }
     
 
