@@ -30,12 +30,14 @@ class StartViewController: UIViewController {
         startgameButto.layer.borderWidth = 3
         
         //MARK: Label unsichtbar machen
-        //highscoreLabel.alpha = 0.0
+        highscoreLabel.alpha = 0.0
         
     }
     //MARK: Show Highscore
     @IBAction func highscoreButton_Tapped(_ sender: UIButton) {
-        
+        UIView.animate(withDuration: 1) {
+            self.highscoreLabel.alpha = 1.0
+        }
     }
     
     //MARK: Start Game
