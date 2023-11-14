@@ -66,9 +66,9 @@ class ViewController: UIViewController {
         answerButton3.layer.borderWidth = 3
         answerButton3.layer.borderColor = UIColor.white.cgColor
         
-        returnButton.layer.cornerRadius = 25
+        returnButton.layer.cornerRadius = 20
         returnButton.layer.borderWidth = 3
-        returnButton.layer.borderColor = UIColor.black.cgColor
+        returnButton.layer.borderColor = UIColor.white.cgColor
         }
     
     // MARK: Actions

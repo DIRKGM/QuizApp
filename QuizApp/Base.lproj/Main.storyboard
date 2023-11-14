@@ -89,13 +89,11 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-R5-C6K">
-                                <rect key="frame" x="145" y="666" width="102" height="33"/>
+                                <rect key="frame" x="126" y="664" width="140" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Zurück">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -156,7 +154,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="highscoreButto_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Sdi-lA-Btq"/>
+                                    <action selector="highscoreButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="k4G-kc-3nO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mz-th-jiv">
@@ -169,7 +167,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startGameButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="86S-ds-50S"/>
+                                    <action selector="startgameButtron_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="3mA-00-B7k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore 1000 Punkte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-Zd-ZBO">
@@ -190,9 +188,9 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
-                        <outlet property="highscoreButton" destination="tCL-fM-SxH" id="Nz4-6T-ETt"/>
-                        <outlet property="highscoreLabel" destination="tCL-fM-SxH" id="bbG-Xm-XHX"/>
-                        <outlet property="startGameButton" destination="tCL-fM-SxH" id="yDq-qp-K6Z"/>
+                        <outlet property="highscoreButton" destination="K8r-ky-eeo" id="cX1-cb-KqM"/>
+                        <outlet property="highscoreLabel" destination="Gn5-Zd-ZBO" id="GKH-ui-yd7"/>
+                        <outlet property="startgameButto" destination="2mz-th-jiv" id="xUf-Q3-7SH"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="startgame" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cD7-bt-Z0C"/>
                     </connections>
                 </viewController>
