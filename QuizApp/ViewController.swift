@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     var questions = [Question]()
     var questionNumber = 0
     var score = 0
-    
+   
+    // Ab hier wird der View geladen
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -54,15 +55,15 @@ class ViewController: UIViewController {
         
         answerButton1.layer.cornerRadius = 25
         answerButton1.layer.borderWidth = 3
-        answerButton1.layer.borderColor = UIColor.black.cgColor
+        answerButton1.layer.borderColor = UIColor.white.cgColor
         
         answerButton2.layer.cornerRadius = 25
         answerButton2.layer.borderWidth = 3
-        answerButton2.layer.borderColor = UIColor.black.cgColor
+        answerButton2.layer.borderColor = UIColor.white.cgColor
         
         answerButton3.layer.cornerRadius = 25
         answerButton3.layer.borderWidth = 3
-        answerButton3.layer.borderColor = UIColor.black.cgColor
+        answerButton3.layer.borderColor = UIColor.white.cgColor
         
     }
     
@@ -102,12 +103,15 @@ class ViewController: UIViewController {
     
     //MARK: Restart Quiz
     func createRestartAllertBox (){
-        let alert = UIAlertController(title: "Quiz Ende", message: "Quiz Neustart", preferredStyle: .alert)
-        let restartAction = UIAlertAction(title: "Neustart", style: .default){ (ACTION) in
+        let alert = UIAlertController(title: "Quiz Ende", message: "Möchtest du das Quiz Neustarten?", preferredStyle: .alert)
+        
+        let restartAction = UIAlertAction(title: "Neustart", style: .default){ (action) in
             self.restart()
-            
+        }
+        let closedAction = UIAlertAction(title: "Schließen", style: .default){ (action) in
         }
         alert.addAction(restartAction)
+        alert.addAction(closedAction)
         self.present(alert, animated: true, completion: nil)
     }
     func restart (){
