@@ -112,8 +112,14 @@ class ViewController: UIViewController {
         let restartAction = UIAlertAction(title: "Neustart", style: .default){ (action) in
             self.restart()
         }
+        
+        let highScoreAction = UIAlertAction(title: "Highscore speichern", style: .default) { (action) in
+            self.saveHighScore()
+        }
+        
         let closedAction = UIAlertAction(title: "Schließen", style: .default){ (action) in
         }
+        alert.addAction(highScoreAction)
         alert.addAction(restartAction)
         alert.addAction(closedAction)
         self.present(alert, animated: true, completion: nil)
@@ -124,6 +130,30 @@ class ViewController: UIViewController {
         questionCountLabel.text = "1 / \(questions.count)"
         nextQuestion()
 }
+    
+    func saveHighScore () {
+        let alert = UIAlertController(title: "Highscore", message: "Bitte Namen eingeben", preferredStyle: .alert)
+        
+        var nameTextFieldTask : UITextField = UITextField()
+        
+        alert.addTextField { (nameTextField) in // in Klammern ist eine Var die nur innerhalb der KLammern verfügbar ist
+            nameTextFieldTask = nameTextField // hierdurch wird sie Global zur Verfügung gestellt um in der kompl. func zur Verfügung zu stehen
+            nameTextField.placeholder = "Name eintippen"
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    
+        let saveAction = UIAlertAction(title: "Speichern", style: .default) { (saveAction) in
+        }
+        
+        let restartAction = UIAlertAction(title: "Neustart", style: .default){ (restartAction) in
+            self.restart()
+        }
+
+        alert.addAction(saveAction)
+        alert.addAction(restartAction)
+        
+    }
     
     //MARK: Update UI
     func updateUI(){
