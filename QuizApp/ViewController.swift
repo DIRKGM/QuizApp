@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         answerButton3.layer.borderWidth = 3
         answerButton3.layer.borderColor = UIColor.white.cgColor
         
-        returnButton.layer.cornerRadius = 20
+        returnButton.layer.cornerRadius = 15
         returnButton.layer.borderWidth = 3
         returnButton.layer.borderColor = UIColor.white.cgColor
         }
@@ -152,7 +152,7 @@ class ViewController: UIViewController {
                 let username = name
                 let userscore = self.score
                 
-                userDefault.set(username, forKey: "userName")
+                userDefault.set(username, forKey: "userName") //username ist die VAR --> "userName" ist der Name unter dem ich es aufrufen kann. Auch in anderen Datein.
                 userDefault.set(userscore, forKey: "highScore")
                 
                 // Back to StartViewController
