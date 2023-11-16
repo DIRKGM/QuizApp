@@ -7,6 +7,9 @@
 
 import UIKit
 
+// durch die Positionierung hier wird die Variable im ganzen Workspace sichtbar
+var userDefault = UserDefaults.standard // Singelton Pewttern
+
 class ViewController: UIViewController {
     
     // MARK: Outlets
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
     var questions = [Question]()
     var questionNumber = 0
     var score = 0
-   
+    
     // Ab hier wird der View geladen
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,6 +147,19 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     
         let saveAction = UIAlertAction(title: "Speichern", style: .default) { (saveAction) in
+            // Name + Score dauerhaft speichern
+            if let name =  nameTextFieldTask.text { // Name aus dem Textfeld auslesen
+                let username = name
+                let userscore = self.score
+                
+                userDefault.set(username, forKey: "userName")
+                userDefault.set(userscore, forKey: "highScore")
+                
+                // Back to StartViewController
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            
         }
         
         let restartAction = UIAlertAction(title: "Neustart", style: .default){ (restartAction) in

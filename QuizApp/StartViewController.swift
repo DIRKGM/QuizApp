@@ -33,15 +33,32 @@ class StartViewController: UIViewController {
         highscoreLabel.alpha = 0.0
         
     }
+    // Vererbte func von viewDidLoad
+    override func viewDidAppear(_ animated: Bool) {
+        loadDateFromUser()
+    }
+    
+    
     //MARK: Show Highscore
     @IBAction func highscoreButton_Tapped(_ sender: UIButton) {
         UIView.animate(withDuration: 1) {
             self.highscoreLabel.alpha = 1.0
         }
+        loadDateFromUser()
+    }
+    
+    //MARK: load user from userDefauklts / lädt automatisch den neusten Highscore in das Label
+    func loadDateFromUser () {
+        // Laden der Daten aus der DB
+        let highScore = userDefault.double(forKey: "highScore")
+        if let name = userDefault.object(forKey: "userName") as? String {
+            highscoreLabel.text = "Name: \(name) Punkte: \(highScore)"
+        }
+        /* If let wenn dann mache --> Durch das .object kann alles mögliche enthalten sein, qussi ein Optional. as? String sagt soviel, dass ich weiß das es ein String ist und speicher mir das
+         */
     }
     
     //MARK: Start Game
-    
     @IBAction func startgameButtron_Tapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "startgame", sender: nil)
     }
