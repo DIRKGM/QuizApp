@@ -183,43 +183,71 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OP-Yp-dh5">
-                                <rect key="frame" x="104" y="557" width="185" height="47"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OP-Yp-dh5">
+                                <rect key="frame" x="104" y="611" width="185" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Allgemein Wissen">
-                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Allgemein Wissen" backgroundImage="wissen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="LAo-ku-cYH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Du-1Qe">
-                                <rect key="frame" x="104" y="612" width="185" height="47"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Du-1Qe">
+                                <rect key="frame" x="104" y="666" width="185" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Deutschland">
-                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Deutschland" backgroundImage="deutschland">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Vsi-lc-DqK"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvH-wm-PQM">
-                                <rect key="frame" x="104" y="502" width="185" height="47"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvH-wm-PQM">
+                                <rect key="frame" x="104" y="556" width="185" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Haupstätte" backgroundImage="city">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="capitalCityButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="GGG-lW-bG6"/>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="NFs-7Q-U3Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Sp-vh6">
+                                <rect key="frame" x="104" y="480" width="185" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Haupstätte">
+                                <buttonConfiguration key="configuration" style="plain" title="Kategorie Auswahl">
                                     <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="capitalCityButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Twn-6h-Egb"/>
+                                    <action selector="categoryButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="PsX-SF-nC9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dBz-h8-AWh"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
+                        <outlet property="capitalCityLabel" destination="OvH-wm-PQM" id="xBy-L7-v7j"/>
+                        <outlet property="categoryLabel" destination="rLN-Sp-vh6" id="Ndc-NI-bN5"/>
+                        <outlet property="germanyLabel" destination="aRg-Du-1Qe" id="dyt-lP-Z1a"/>
                         <outlet property="highscoreButton" destination="K8r-ky-eeo" id="cX1-cb-KqM"/>
                         <outlet property="highscoreLabel" destination="Gn5-Zd-ZBO" id="GKH-ui-yd7"/>
+                        <outlet property="knowledgeLabel" destination="1OP-Yp-dh5" id="HH6-yo-gal"/>
                         <outlet property="startgameButto" destination="2mz-th-jiv" id="xUf-Q3-7SH"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="startgame" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cD7-bt-Z0C"/>
                     </connections>
@@ -230,6 +258,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="city" width="640" height="369"/>
+        <image name="deutschland" width="640" height="359"/>
+        <image name="wissen" width="640" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

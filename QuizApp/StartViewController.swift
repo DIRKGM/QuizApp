@@ -14,6 +14,10 @@ class StartViewController: UIViewController {
     @IBOutlet weak var highscoreButton: UIButton!
     @IBOutlet weak var startgameButto: UIButton!
     @IBOutlet weak var highscoreLabel: UILabel!
+    @IBOutlet weak var capitalCityLabel: UIButton!
+    @IBOutlet weak var knowledgeLabel: UIButton!
+    @IBOutlet weak var germanyLabel: UIButton!
+    @IBOutlet weak var categoryLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +33,33 @@ class StartViewController: UIViewController {
         startgameButto.layer.cornerRadius = 25
         startgameButto.layer.borderWidth = 3
         
+        categoryLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
+        categoryLabel.layer.borderColor = UIColor.white.cgColor
+        categoryLabel.layer.cornerRadius = 25
+        categoryLabel.layer.borderWidth = 3
+        
+        capitalCityLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
+        capitalCityLabel.layer.borderColor = UIColor.white.cgColor
+        capitalCityLabel.layer.cornerRadius = 25
+        capitalCityLabel.layer.borderWidth = 3
+    
+        knowledgeLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
+        knowledgeLabel.layer.borderColor = UIColor.white.cgColor
+        knowledgeLabel.layer.cornerRadius = 25
+        knowledgeLabel.layer.borderWidth = 3
+        
+        germanyLabel.backgroundColor = UIColor(white: 1.0, alpha: 0.8)
+        germanyLabel.layer.borderColor = UIColor.white.cgColor
+        germanyLabel.layer.cornerRadius = 25
+        germanyLabel.layer.borderWidth = 3
+    
         //MARK: Label unsichtbar machen
         highscoreLabel.alpha = 0.0
+        
+        //MARK: Tags Label
+        capitalCityLabel.tag = 1
+        knowledgeLabel.tag = 2
+        germanyLabel.tag = 3
         
     }
     // Vererbte func von viewDidLoad
@@ -62,6 +91,16 @@ class StartViewController: UIViewController {
     @IBAction func startgameButtron_Tapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "startgame", sender: nil)
     }
+    
+    //MARK: Category Auswahl
+    
+    @IBAction func categoryButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func categoryButton_Tapped(_ sender: UIButton) {
+    }
+    
+    
     
 
 }
