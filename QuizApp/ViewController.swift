@@ -110,7 +110,7 @@ class ViewController: UIViewController {
     
     //MARK: Restart Quiz
     func createRestartAllertBox (){
-        let alert = UIAlertController(title: "Quiz Ende", message: "Möchtest du das Quiz Neustarten?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Quiz Ende", message: "Glückwunsch!", preferredStyle: .alert)
         
         let restartAction = UIAlertAction(title: "Neustart", style: .default){ (action) in
             self.restart()
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
         }
         alert.addAction(highScoreAction)
         alert.addAction(restartAction)
-        alert.addAction(closedAction)
+        //alert.addAction(closedAction)
         self.present(alert, animated: true, completion: nil)
     }
     func restart (){
