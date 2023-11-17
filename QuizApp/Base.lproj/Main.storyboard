@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auB-Wg-MeI">
-                                <rect key="frame" x="23" y="100" width="361" height="63.333333333333371"/>
+                                <rect key="frame" x="16" y="88" width="361" height="63.333333333333371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
@@ -171,13 +171,6 @@
                                     <action selector="startgameButtron_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="3mA-00-B7k"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore 1000 Punkte" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-Zd-ZBO">
-                                <rect key="frame" x="64" y="278" width="265" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OP-Yp-dh5">
                                 <rect key="frame" x="104" y="611" width="185" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,6 +182,7 @@
                                 </state>
                                 <connections>
                                     <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="LAo-ku-cYH"/>
+                                    <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="g7W-3g-cIa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Du-1Qe">
@@ -202,6 +196,7 @@
                                 </state>
                                 <connections>
                                     <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Vsi-lc-DqK"/>
+                                    <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Q95-Bl-J59"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvH-wm-PQM">
@@ -216,6 +211,7 @@
                                 <connections>
                                     <action selector="capitalCityButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="GGG-lW-bG6"/>
                                     <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="NFs-7Q-U3Y"/>
+                                    <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="FZ7-bn-UYW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLN-Sp-vh6">
@@ -238,6 +234,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore 1000 Punkte" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-Zd-ZBO">
+                                <rect key="frame" x="64" y="254" width="265" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dBz-h8-AWh"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>

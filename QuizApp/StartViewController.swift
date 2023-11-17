@@ -92,15 +92,14 @@ class StartViewController: UIViewController {
         self.performSegue(withIdentifier: "startgame", sender: nil)
     }
     
-    //MARK: Category Auswahl
-    
-    @IBAction func categoryButton(_ sender: UIButton) {
-    }
+    //MARK: Category Choose
     
     @IBAction func categoryButton_Tapped(_ sender: UIButton) {
     }
     
     
+    @IBAction func category_Tapped(_ sender: UIButton) {
+    }
     
 
 }
