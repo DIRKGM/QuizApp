@@ -101,12 +101,22 @@ class StartViewController: UIViewController {
     //MARK: Category Choose
     
     @IBAction func categoryButton_Tapped(_ sender: UIButton) {
-       
+                UIView.animate(withDuration: 0.5, animations: {
+                self.germanyLabel.alpha = 1.0
+            })  { (true) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.knowledgeLabel.alpha = 1.0
+                }) { (true) in
+                    UIView.animate(withDuration: 0.5) {
+                        self.capitalCityLabel.alpha = 1.0
+                    }
+                }
+                
+            }
     }
     
     
     @IBAction func category_Tapped(_ sender: UIButton) {
     }
-    
 
 }

@@ -181,7 +181,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="LAo-ku-cYH"/>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="UWm-W4-cFH"/>
                                     <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="g7W-3g-cIa"/>
                                 </connections>
                             </button>
@@ -195,7 +195,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Vsi-lc-DqK"/>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="evw-gW-5wR"/>
                                     <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Q95-Bl-J59"/>
                                 </connections>
                             </button>
@@ -210,7 +210,7 @@
                                 </state>
                                 <connections>
                                     <action selector="capitalCityButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="GGG-lW-bG6"/>
-                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="NFs-7Q-U3Y"/>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="LYX-xy-Nkp"/>
                                     <action selector="category_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="FZ7-bn-UYW"/>
                                 </connections>
                             </button>
@@ -224,8 +224,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="capitalCityButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="Twn-6h-Egb"/>
-                                    <action selector="categoryButton:" destination="D5t-3V-D2D" eventType="touchUpInside" id="PsX-SF-nC9"/>
+                                    <action selector="categoryButton_Tapped:" destination="D5t-3V-D2D" eventType="touchUpInside" id="f2b-63-Qc7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kji-v7-khi">
@@ -269,7 +268,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
