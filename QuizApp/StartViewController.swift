@@ -56,6 +56,11 @@ class StartViewController: UIViewController {
         //MARK: Label unsichtbar machen
         highscoreLabel.alpha = 0.0
         
+        //MARK: Category Label unsichtbar
+        germanyLabel.alpha = 0.0
+        knowledgeLabel.alpha = 0.0
+        capitalCityLabel.alpha = 0.0
+        
         //MARK: Tags Label
         capitalCityLabel.tag = 1
         knowledgeLabel.tag = 2
@@ -86,6 +91,7 @@ class StartViewController: UIViewController {
         /* If let wenn dann mache --> Durch das .object kann alles mögliche enthalten sein, qussi ein Optional. as? String sagt soviel, dass ich weiß das es ein String ist und speicher mir das
          */
     }
+
     
     //MARK: Start Game
     @IBAction func startgameButtron_Tapped(_ sender: UIButton) {
@@ -95,6 +101,7 @@ class StartViewController: UIViewController {
     //MARK: Category Choose
     
     @IBAction func categoryButton_Tapped(_ sender: UIButton) {
+       
     }
     
     

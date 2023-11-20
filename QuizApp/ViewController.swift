@@ -120,7 +120,7 @@ class ViewController: UIViewController {
             self.saveHighScore()
         }
         
-        let closedAction = UIAlertAction(title: "Schließen", style: .default){ (action) in
+        _ = UIAlertAction(title: "Schließen", style: .default){ (action) in
         }
         alert.addAction(highScoreAction)
         alert.addAction(restartAction)
