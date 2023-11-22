@@ -117,6 +117,19 @@ class StartViewController: UIViewController {
     
     
     @IBAction func category_Tapped(_ sender: UIButton) {
+            
+        let tag = sender.tag
+        switch tag {
+        case 1:
+            startgameButto.setBackgroundImage(UIImage(named: "city"), for: .normal)
+        case 2:
+            startgameButto.setBackgroundImage(UIImage(named: "wissen"), for: .normal)
+        case 3:
+            startgameButto.setBackgroundImage(UIImage(named: "deutschland"), for: .normal)
+        default:
+            startgameButto.setBackgroundImage(UIImage(named: "city"), for: .normal)
+            
+        }
     }
-
-}
+        
+    }
